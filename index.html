@@ -13,8 +13,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #0f172a; /* Fondo oscuro profundo */
+            color: #cbd5e1; /* Texto claro suave */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,10 +25,11 @@
         .container {
             text-align: center;
             max-width: 600px;
-            background: white;
+            background: #1e293b; /* Tarjeta un poco más clara que el fondo */
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid #334155; /* Borde sutil */
         }
 
         .illustration {
@@ -36,26 +37,31 @@
             height: auto;
             border-radius: 8px;
             margin-bottom: 30px;
+            opacity: 0.85; /* Reduce el brillo de la imagen para modo oscuro */
         }
 
         h1 {
             font-size: 2.5rem;
-            color: #2c3e50;
+            color: #f8fafc; /* Texto principal casi blanco */
             margin-bottom: 15px;
         }
 
         p {
             font-size: 1.1rem;
-            color: #7f8c8d;
+            color: #94a3b8; /* Texto secundario grisáceo */
             line-height: 1.6;
             margin-bottom: 30px;
+        }
+
+        p strong {
+            color: #38bdf8; /* Resalta el dominio en azul neón */
         }
 
         .spinner {
             width: 50px;
             height: 50px;
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #3498db;
+            border: 5px solid #334155;
+            border-top: 5px solid #38bdf8; /* Spinner a juego con el azul */
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin: 0 auto 20px;
@@ -68,7 +74,7 @@
 
         .footer {
             font-size: 0.9rem;
-            color: #bdc3c7;
+            color: #64748b;
         }
     </style>
 </head>
