@@ -3,95 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio en Construcción | gozmac.com</title>
+    <title>Gozmac | Cloud Infrastructure & Kubernetes</title>
+    <!-- Tailwind CSS CDN para un diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para los íconos de contacto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Sutil gradiente oscuro inspirado en el fondo de tu logo */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f172a; /* Fondo oscuro profundo */
-            color: #cbd5e1; /* Texto claro suave */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            text-align: center;
-            max-width: 600px;
-            background: #1e293b; /* Tarjeta un poco más clara que el fondo */
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid #334155; /* Borde sutil */
-        }
-
-        .illustration {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            opacity: 0.85; /* Reduce el brillo de la imagen para modo oscuro */
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #f8fafc; /* Texto principal casi blanco */
-            margin-bottom: 15px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #94a3b8; /* Texto secundario grisáceo */
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        p strong {
-            color: #38bdf8; /* Resalta el dominio en azul neón */
-        }
-
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #334155;
-            border-top: 5px solid #38bdf8; /* Spinner a juego con el azul */
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .footer {
-            font-size: 0.9rem;
-            color: #64748b;
+            background: radial-gradient(circle at center, #1f2937 0%, #111827 100%);
         }
     </style>
 </head>
-<body>
+<body class="text-gray-200 font-sans min-h-screen flex flex-col justify-between">
 
-    <div class="container">
-        <img class="illustration" src="https://picsum.photos/id/1060/600/400" alt="Sitio en construcción">
-        
-        <div class="spinner"></div>
-        
-        <h1>Estamos trabajando en algo grande</h1>
-        <p>El sitio web <strong>gozmac.com</strong> está recibiendo mejoras internas. Volveremos muy pronto con una experiencia totalmente renovada. ¡Gracias por tu paciencia!</p>
-        
-        <div class="footer">
-            &copy; 2026 gozmac.com - Todos los derechos reservados.
+    <!-- Navegación -->
+    <header class="border-b border-gray-800 bg-gray-900/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- REEMPLAZA 'logo.png' con la ruta real de tu imagen en el repositorio -->
+                <img src="logo.png" alt="Gozmac Logo" class="h-10 w-auto rounded-md shadow-md">
+                <span class="text-xl font-bold tracking-wider text-white">GOZMAC</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#servicios" class="hover:text-white transition-colors">Servicios</a>
+                <a href="#productos" class="hover:text-white transition-colors">Tecnologías</a>
+                <a href="#contacto" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-md transition-colors">Contacto</a>
+            </nav>
         </div>
-    </div>
+    </header>
+
+    <!-- Héroe / Presentación principal -->
+    <section class="max-w-4xl mx-auto text-center px-4 py-16 md:py-24">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4">
+            GOZMAC
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-400 font-light mb-8 uppercase tracking-widest">
+            Containers and Kubernetes
+        </p>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Diseño, despliegue y optimización de infraestructura nativa de la nube. Aseguramos la alta disponibilidad, observabilidad y continuidad de tus plataformas de contenedores.
+        </p>
+    </section>
+
+    <!-- Sección de los 3 Pilares de Infraestructura -->
+    <main id="servicios" class="max-w-6xl mx-auto px-4 py-12 w-full grid md:grid-cols-3 gap-8">
+        
+        <!-- Tarjeta 1: Kubernetes -->
+        <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-xl shadow-xl hover:border-gray-700 transition-all flex flex-col justify-between">
+            <div>
+                <div class="w-12 h-12 bg-blue-900/30 text-blue-400 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-cubes text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Infraestructura Kubernetes</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Arquitectura y despliegue de clusters robustos de orquestación de contenedores, adaptados a las necesidades de rendimiento y escalabilidad de tu negocio.
+                </p>
+            </div>
+            <div class="border-t border-gray-800 pt-4">
+                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider block mb-2">Ecosistema:</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">K8s</span>
+                    <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">EKS</span>
+                    <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">GKE</span>
+                    <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">OpenShift</span>
+                    <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">OKD</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2: Monitoring -->
+        <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-xl shadow-xl hover:border-gray-700 transition-all flex flex-col justify-between">
+            <div>
+                <div class="w-12 h-12 bg-green-900/30 text-green-400 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-chart-line text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Observabilidad & Monitoreo</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Implementación de telemetría avanzada para anticipar fallos, analizar métricas en tiempo real y asegurar la salud de tus microservicios.
+                </p>
+            </div>
+            <div class="border-t border-gray-800 pt-4">
+                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider block mb-2">Tecnologías:</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">Prometheus</span>
+                    <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">Grafana</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3: Soporte -->
+        <div class="bg-gray-900/60 border border-gray-800 p-8 rounded-xl shadow-xl hover:border-gray-700 transition-all flex flex-col justify-between">
+            <div>
+                <div class="w-12 h-12 bg-purple-900/30 text-purple-400 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-headset text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Soporte Kubernetes & SLA</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Soporte técnico especializado para la resolución de incidentes complejos en entornos de producción, operado bajo estrictas metodologías de mesa de ayuda.
+                </p>
+            </div>
+            <div class="border-t border-gray-800 pt-4">
+                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider block mb-2">Gestión de Tickets:</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">GLPI ITSM</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Sección de Contacto y Footer -->
+    <footer id="contacto" class="bg-gray-950 border-t border-gray-900 mt-20 py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-6">¿Listo para escalar tu infraestructura?</h2>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-8">
+                <!-- Enlace al Correo Electrónico -->
+                <a href="mailto:gozmacpc@gmail.com" class="inline-flex items-center space-x-3 bg-gray-900 border border-gray-800 hover:border-gray-700 px-6 py-3 rounded-lg text-gray-300 hover:text-white transition-all w-full sm:w-auto justify-center">
+                    <i class="fa-solid fa-envelope text-xl text-red-400"></i>
+                    <span>gozmacpc@gmail.com</span>
+                </a>
+                
+                <!-- Enlace a LinkedIn -->
+                <a href="https://www.linkedin.com/in/oscaralejandroguzman" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3 bg-gray-900 border border-gray-800 hover:border-gray-700 px-6 py-3 rounded-lg text-gray-300 hover:text-white transition-all w-full sm:w-auto justify-center">
+                    <i class="fa-brands fa-linkedin text-xl text-blue-500"></i>
+                    <span>Óscar Alejandro Guzmán</span>
+                </a>
+            </div>
+
+            <p class="text-sm text-gray-600">
+                &copy; 2026 gozmac.com. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
